@@ -1,0 +1,152 @@
+  @font-face {
+                font-family: moon;
+                src: url(fonts/MoonLight.otf);
+            }
+            
+            @font-face {
+                font-family: moonbold;
+                src: url(fonts/MoonBold.otf);
+            }
+            
+            
+            #banner{
+                
+                background: #bbc1ae;
+                background-image: url('images/banner.jpeg');
+                padding: 0.1%;
+                position: absolute;
+                left: 0%;
+                right: 0%;
+                top: 0%;
+                height: 12%;
+            }
+            
+            #banner #time{
+                font-size:15px;
+                position:absolute;
+                left:0%;
+                top:-10%;
+                margin-top:-20px;
+    
+            }
+            
+            #sidebar{
+                width: 10%;
+                background: beige;
+                float: left;
+                left: 0%;
+                top: 12.5%;
+                position: absolute;
+                bottom: -100%
+            }
+            
+            #content, #content1, #content2, #content3{
+                /* Products within the page will be displayed in 2 columns */
+                margin-top: 8%;
+                margin-left: 12%;
+                width: 35%;
+                float: left;
+            }
+
+            #content4{
+                margin-left: 12%;
+                margin-top: 11%;
+            }
+
+            form {
+                display: table;
+                width: 15%;
+            }
+           
+            form p {
+                display: table-row;
+            }
+            
+            lable {
+                display: table-cell;
+                }
+            
+            form input {
+                display: table-cell;
+                width: 100%;
+            }
+            
+            #botBanner{
+                width: 100%;
+                height: 7.5%;
+                position: fixed;
+                bottom: 0%;
+                left: 0%;
+                right: 0%;
+                background: #bbc1ae;
+                margin-bottom: 0px;
+            }
+            
+            #botContent, #botContent1, #botContent2{
+                /* Used for content in the bottom banner */
+                width: 33.33%;
+                height: 55%;
+                text-align: center;
+                float: left;
+                box-sizing: border-box;
+                border: 1px solid black;
+            }
+            
+            
+            h1{ 
+                /* Used for page title */
+                color: black;
+                font-family: Arial;
+                position:relative;
+                top: 0%;
+                font-family: moonbold;
+                font-size: 55px;
+                text-align: center;
+            }
+            
+            h1 clock{
+                /* Used for time*/
+                margin-right: 10%;
+                margin-top: 10%;
+                color: black;
+            }
+            
+            h2{
+                /* Used for "MENU" in sidebar */
+                font-weight: bold;
+                font-family: moonbold;
+                padding-left: 5%;
+            }
+            
+            h3{
+                /* Used for text in the sidebar */
+                font-family: serif;
+                color: goldenrod;
+                font-family: moon;
+                padding-left: 8px;
+            }
+            
+            h4{
+                /* Used for text in content */
+                font-family: sans-serif;
+            }
+            
+            h4 des{
+                font-size: 14px;
+            }
+            
+            h5{
+                /* Used for text in bottom banner */
+                font-size: 8;
+                position: relative;
+                top: -7px;
+                text-align: center;
+                color: black;
+                padding-top: 0.5%; 
+                
+            }
+            
+            a:link{
+                /* Removes the underline from hyperlinks */
+                text-decoration:  none;
+            }
