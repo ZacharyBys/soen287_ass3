@@ -1,0 +1,4 @@
+1- A query string contains data, and can be put into the URI. It is used to send or request data from a website or a server, such as in forms.
+2- It is characteristic of both methods, but in the GET method, the query string is found in the URL, and in the POST method, it is in the HTTP message body.
+3-"age=22&name=Obi+Wan+Kenobi&number=5435432156" is the part of the URL above that is the query string.
+4-There are three different data parameters being passed, age, name and number.
