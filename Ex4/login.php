@@ -23,11 +23,12 @@
         
         <div id="sidebar">
             <h2>MENU</h2>
-            <a href="home.html"><h3>Home</h3></a>    
-            <a href=""><h3>My Cart</h3></a>
+            <a href="home.php"><h3>Home</h3></a>    
+            <a href="cart.php"><h3>My Cart</h3></a>
             <a href=""><h3>Checkout</h3></a>
             <br />
             <a href="registration.php"><h3>Register</h3></a>
+            
         </div>
         
         <div id="content4">
@@ -62,19 +63,23 @@
             <?php
                 if (isset($_POST['select'])){
                         $array = explode("\n", file_get_contents('members.txt'));
-                        $i = 0;
+                        $i = 2;
                     if ($_POST['ema'] != "" && $_POST['pass'] != ""){
-                        while ($_POST['ema'] != $array[$i] && $i < (count($array)-1)){
-                            $i+=1;
-                        }
-                        if (count($array)>($i+1)){
+                        while (trim($_POST['ema']) != trim($array[$i])){
                             $i+=2;
-                            if ($_POST['pass'] == $array[($i)]){
-                                echo "LOGGED IN!";
-                            } else {
-                                echo "Incorrect Password/Email combination";
-                            }
                         }
+                            $i+=2;
+                            if (trim($_POST['pass']) == trim($array[($i)])){
+                                echo '<script language="javascript">alert("Logged In.")</script>';
+                                session_start();
+                                $_SESSION['active'] = true;
+                                $_SESSION['w1quantity']=0;
+                                $_SESSION['w2quantity']=0;
+                                $_SESSION['w3quantity']=0;
+                                header("Location: home.php");
+                            } else {
+                                echo '<script language="javascript">alert("Incorrect combination")</script>';
+                            }
                     }
                 }
             ?>

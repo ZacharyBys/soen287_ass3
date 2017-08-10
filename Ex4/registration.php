@@ -24,7 +24,7 @@
         
         <div id="sidebar">
             <h2>MENU</h2>
-            <a href="home.html"><h3>Home</h3></a>    
+            <a href="home.php"><h3>Home</h3></a>    
             <a href=""><h3>My Cart</h3></a>
             <a href=""><h3>Checkout</h3></a>
             <br />
@@ -121,7 +121,7 @@
                         fwrite($handle, $ea.PHP_EOL);
                         fwrite($handle, $pn.PHP_EOL);
                         fwrite($handle, $initial.PHP_EOL);
-                        header("Refresh:0; url=home.html");
+                        header("Refresh:0; url=home.php");
                     }
                     
                 }
