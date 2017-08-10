@@ -68,6 +68,7 @@
                 if ($confirm == ""){
                      $error = "Please fill all boxes";
                 }
+
             }
             ?>
             <h2>Please Enter the following information</h2>
@@ -113,6 +114,16 @@
             <?php
                 if (isset($_POST['sel'])){
                     echo $error;
+                    if($error == ""){
+                        $handle = fopen('members.txt', 'a') or die('Cannot open file  ');
+                        fwrite($handle, $fn.PHP_EOL);
+                        fwrite($handle, $ln.PHP_EOL);
+                        fwrite($handle, $ea.PHP_EOL);
+                        fwrite($handle, $pn.PHP_EOL);
+                        fwrite($handle, $initial.PHP_EOL);
+                        header("Refresh:0; url=home.html");
+                    }
+                    
                 }
             ?>
         </div>

@@ -27,12 +27,24 @@ function checkEntry(){
     }
     
     alert("You have been registered");
-    document.getElementById("fn").value="";
-    document.getElementById("ln").value="";
-    document.getElementById("ea").value="";
-    document.getElementById("pn").value="";
-    document.getElementById("initial").value="";
-    document.getElementById("confirm").value="";
+    //document.getElementById("fn").value="";
+    //document.getElementById("ln").value="";
+    //document.getElementById("ea").value="";
+    //document.getElementById("pn").value="";
+    //document.getElementById("initial").value="";
+    //document.getElementById("confirm").value="";
+    
+    return 1;
+}
+
+function checkLogin(){
+    var email = document.getElementById("ema").value;
+    var pass = document.getElementById("pass").value;
+    
+    if (pass == "" || ema == ""){
+        alert("Please fill all the information in the boxes below");
+        return 0;
+    }
     
     return 1;
 }
