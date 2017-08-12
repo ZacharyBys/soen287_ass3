@@ -20,6 +20,7 @@
         echo nl2br("\n");
         echo "Your last visit was on " . $_COOKIE[$datecookie] . " at " . $_COOKIE[$timecookie];
     }
+
     ?>
     
     

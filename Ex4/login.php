@@ -66,7 +66,7 @@
                         $i = 2;
                     if ($_POST['ema'] != "" && $_POST['pass'] != ""){
                         while (trim($_POST['ema']) != trim($array[$i])){
-                            $i+=2;
+                            $i+=1;
                         }
                             $i+=2;
                             if (trim($_POST['pass']) == trim($array[($i)])){

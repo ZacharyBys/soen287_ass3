@@ -5,7 +5,6 @@
         
     </head>
     <body>
-        
         <h3>factorial function tested with 5</h3>
         <?php 
         $sum=1;
@@ -25,6 +24,7 @@
             $mostFrequent=null;
             $highestQuantity=0;
             $quantity=0;
+            $array = array_map('strtolower', $array);
             
             foreach ($array as $arrayval){
                 foreach($array as $arrayval1){
@@ -70,6 +70,7 @@
         
         <h3>dayAfterTomorow function</h3>
         <?php
+        date_default_timezone_set("America/New_York");
         function dayAfterTomorrow(){
             $date = array(date('d')+2,date('m'),date('Y'));
             return implode("/", $date);
